@@ -1,0 +1,60 @@
+Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colored Boxes</title>
+  <link rel="stylesheet" href="Shorif.css" />
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="java.js"></script>
+</body>
+</html>
+
+
+CSS
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: inline-block;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .aqua {
+    background-color: aqua;
+    color: black; 
+  }
+  
+
+JAVA
+
+const container = document.getElementById('container');
+
+for (let i = 1; i <= 10; i++) {
+  const box = document.createElement('div');
+  box.classList.add('box');
+
+  if (i % 2 === 1) {
+    box.classList.add('orange');
+  } else {
+    box.classList.add('aqua');
+  }
+
+  box.textContent = i;
+
+  container.appendChild(box);
+}
