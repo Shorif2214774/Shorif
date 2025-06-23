@@ -1,0 +1,178 @@
+#HTML
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Shop with me</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <nav>
+            <h2>Shop with me</h2>
+            <a href="http://www.google.com">Account</a>
+            <div>
+                <input type="text" placeholder="enter search">
+                <button type="submit">Search</button>
+            </div>
+            <div>
+                <i class="fa-solid fa-cart-plus"></i><p><sub>0</sub></p>        </nav>
+    </section>
+
+    <section class="products">
+        <div class="product-grid">
+            <div>
+                <img src="https://www.lovefoodhatewaste.com/sites/default/files/styles/twitter_card_image/public/2022-07/Citrus%20fruits.jpg.webp?itok=H1j9CCCS"
+                    alt="">
+                <h1>Product 1</h1>
+                <p>$24.6</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2i9rgEKnJJeCgCxlFx52apSsK_lefKRONUzWwh0sTLOxql6uLlV1mhGZ90u7cPb2TCM&usqp=CAU"
+                    alt="">
+                <h1>Product 2</h1>
+                <p>$24.6</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrgfWUaBR3KYcMEv4VzCE_kCgrBX47TpqAZ3AGFjSRUJ14JKTZ4bJibUXxOXlYB0WdB4&usqp=CAU"
+                    alt="">
+                <h1>Product 3</h1>
+                <p>$24.6</p>
+            </div>
+            <div>
+                <img src="https://media.post.rvohealth.io/wp-content/uploads/2021/05/apples-1200x628-facebook.jpg"
+                    alt="">
+                <h1>Product 4</h1>
+                <p>$24.6</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Thank you for watching</p>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+#CSS
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 4px;
+}
+
+nav h2 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+nav a {
+    color: white;
+    text-decoration: underline;
+    margin-right: 20px;
+}
+
+nav input[type="text"] {
+    border: 1px solid white;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+nav button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav i {
+    margin-left: 20px;
+    color: white;
+}
+
+section.products {
+    margin-top: 80px;
+    padding: 0 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-grid div {
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 5px black;
+}
+
+.product-grid div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-grid p {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+}
